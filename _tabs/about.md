@@ -4,13 +4,6 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
-
-Here’s a version that avoids fluff, keeps a grounded tone, and leans into the idea of a mind that pokes at things until they make more sense—or at least become more interesting.
-
----
-
 ## About Me
 
 Rabid Curiosity is where I put the threads I’m tugging on—technology, work, habits, systems, the things that break, the things that work, and the questions that sit in the back of my head for too long.
