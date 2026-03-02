@@ -1,6 +1,13 @@
 ---
 title: "Growth through constraints"
-date: 2025-11-29
+date: 2025-11-29 14:30:00
+categories:
+  - Psychology
+  - Personal Development
+tags:
+  - growth
+  - constraints
+  - mindset
 ---
 
 ## Introduction

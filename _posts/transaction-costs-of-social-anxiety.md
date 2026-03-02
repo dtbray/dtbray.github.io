@@ -1,6 +1,13 @@
 ---
 title: "Transaction costs of social anxiety"
-date: 2025-11-29
+date: 2025-11-29 14:45:00
+categories:
+  - Psychology
+  - Mental Health
+tags:
+  - social-anxiety
+  - psychology
+  - relationships
 ---
 
 ## Introduction

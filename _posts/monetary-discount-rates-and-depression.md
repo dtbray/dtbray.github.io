@@ -1,6 +1,13 @@
 ---
 title: "Monetary discount rates and depression"
-date: 2025-11-29
+date: 2025-11-29 14:35:00
+categories:
+  - Psychology
+  - Economics
+tags:
+  - depression
+  - economics
+  - decision-making
 ---
 
 ## Introduction

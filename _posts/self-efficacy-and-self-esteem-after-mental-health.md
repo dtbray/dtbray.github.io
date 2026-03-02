@@ -1,6 +1,13 @@
 ---
 title: "Self-efficacy and self-esteem after becoming mentally healthy"
-date: 2025-11-29
+date: 2025-11-29 14:40:00
+categories:
+  - Psychology
+  - Mental Health
+tags:
+  - self-efficacy
+  - self-esteem
+  - mental-health
 ---
 
 ## Introduction
