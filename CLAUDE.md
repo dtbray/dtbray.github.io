@@ -220,3 +220,32 @@ Create a new file in `_tabs/` with appropriate front matter including `layout`, 
 ### Change social links
 
 Edit `_data/contact.yml` or `_data/share.yml` using Font Awesome icon class names.
+
+## Pending Setup
+
+### Comments (Giscus)
+
+Comments are disabled (`comments: false` in `_config.yml` defaults). To enable:
+
+1. Enable GitHub Discussions on the repo (Settings → General → Features → Discussions)
+2. Install the Giscus GitHub App: https://github.com/apps/giscus → authorize for `dtbray/dtbray.github.io`
+3. Visit https://giscus.app, enter `dtbray/dtbray.github.io`, choose a Discussion category
+4. Copy the `data-repo-id` and `data-category-id` values it generates
+5. Add to `_config.yml`:
+
+```yaml
+comments:
+  provider: giscus
+  giscus:
+    repo: dtbray/dtbray.github.io
+    repo_id: # paste data-repo-id here
+    category: # category name chosen in step 3
+    category_id: # paste data-category-id here
+    mapping: pathname
+    strict: 1
+    input_position: bottom
+    lang: en
+    reactions_enabled: 1
+```
+
+6. Set `comments: true` in the `_config.yml` posts defaults
