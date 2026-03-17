@@ -7,19 +7,12 @@
 
 set -euo pipefail
 
-# Only run full setup in remote (web) sessions
-if [ "${CLAUDE_CODE_REMOTE:-}" != "true" ]; then
-  exit 0
-fi
-
 cd "$CLAUDE_PROJECT_DIR"
 
 # ── Install Ruby dependencies ─────────────────────────────────────────────────
 
-if bundle check &>/dev/null; then
-  : # gems already installed, nothing to do
-else
-  bundle install --quiet 2>&1 || echo "Warning: bundle install failed — Jekyll build tools may be unavailable"
+if ! bundle check &>/dev/null; then
+  bundle install &>/dev/null || echo "Warning: bundle install failed — run 'bundle install' manually before building"
 fi
 
 # ── Writing context ───────────────────────────────────────────────────────────
