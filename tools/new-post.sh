@@ -48,10 +48,8 @@ cat > "$FILEPATH" <<EOF
 ---
 title: "$TITLE"
 date: $DATETIME
-categories:
-  -
-tags:
-  -
+categories: []
+tags: []
 ---
 
 ## Introduction
