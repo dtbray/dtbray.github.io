@@ -1,0 +1,16 @@
+name: Lint Posts
+
+on:
+  pull_request:
+    paths:
+      - "_posts/**"
+      - "tools/lint-posts.sh"
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Lint posts
+        run: bash tools/lint-posts.sh
