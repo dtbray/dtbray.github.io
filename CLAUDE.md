@@ -221,6 +221,27 @@ Create a new file in `_tabs/` with appropriate front matter including `layout`, 
 
 Edit `_data/contact.yml` or `_data/share.yml` using Font Awesome icon class names.
 
+## Writing Sessions
+
+When helping write or expand posts, do this first:
+
+1. **Read `WRITING.md`** — it contains voice guidance, structural patterns,
+   thematic threads, and what "finished" looks like. Don't skip this.
+2. **Run `bash tools/writing-context.sh`** — gives current post inventory by
+   status, series progress, and tag vocabulary. Paste output into context if
+   starting a new session.
+3. **Read the target post** before editing or expanding it.
+4. For new posts: `bash tools/new-post.sh "Title"` creates the file with
+   correct naming and front matter.
+
+**Scaffolds vs finished posts**: Most posts in `_posts/` are scaffolds (bullet
+points, placeholder headings). Treat them as outlines, not drafts. Finished
+posts have real prose, specific arguments, and section headings that reflect
+structure rather than generic labels (not `## Introduction`).
+
+**Word count targets**: 600–1,200 words for standard posts; 800–1,500 for
+public finance series posts. Run `bash tools/stats.sh` to see current counts.
+
 ## Pending Setup
 
 ### Comments (Giscus)
