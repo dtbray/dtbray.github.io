@@ -88,7 +88,7 @@ pageviews:
 #     light — Use the light color scheme
 #     dark — Use the dark color scheme
 #
-paginate: 50
+paginate: 1000
 
 theme_mode: # [light | dark]
 
