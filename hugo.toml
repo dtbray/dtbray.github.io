@@ -7,7 +7,7 @@ enableRobotsTXT = true
 enableGitInfo = false
 
 [permalinks]
-  posts = "/posts/:slug/"
+  posts = "/posts/:contentbasename/"
 
 [taxonomies]
   category = "categories"

@@ -22,10 +22,22 @@ while (($#)); do
   opt="$1"
   case $opt in
   -H | --host)
+    if [[ $# -lt 2 || "$2" == -* ]]; then
+      echo "> Missing value for '$opt'"
+      echo
+      help
+      exit 1
+    fi
     host="$2"
     shift 2
     ;;
   -p | --port)
+    if [[ $# -lt 2 || "$2" == -* ]]; then
+      echo "> Missing value for '$opt'"
+      echo
+      help
+      exit 1
+    fi
     port="$2"
     shift 2
     ;;
