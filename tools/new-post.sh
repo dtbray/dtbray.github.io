@@ -9,7 +9,7 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-POSTS_DIR="$SCRIPT_DIR/../_posts"
+POSTS_DIR="$SCRIPT_DIR/../content/posts"
 
 # ── Title ────────────────────────────────────────────────────────────────────
 
@@ -32,13 +32,12 @@ SLUG=$(echo "$TITLE" \
   | tr -s ' ' '-' \
   | sed 's/^-//;s/-$//')
 
-DATE=$(date +"%Y-%m-%d")
 DATETIME=$(date +"%Y-%m-%d %H:%M:%S %z")
-FILENAME="${DATE}-${SLUG}.md"
+FILENAME="${SLUG}.md"
 FILEPATH="$POSTS_DIR/$FILENAME"
 
 if [[ -f "$FILEPATH" ]]; then
-  echo "Error: _posts/$FILENAME already exists"
+  echo "Error: content/posts/$FILENAME already exists"
   exit 1
 fi
 
@@ -64,7 +63,7 @@ tags: []
 
 EOF
 
-echo "Created: _posts/$FILENAME"
+echo "Created: content/posts/$FILENAME"
 
 # ── Open in editor ───────────────────────────────────────────────────────────
 

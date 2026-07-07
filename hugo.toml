@@ -1,0 +1,75 @@
+baseURL = "https://blog.thomas-bray.com/"
+locale = "en-us"
+title = "Rabid Curiosity"
+theme = "PaperMod"
+copyright = "Thomas Bray"
+enableRobotsTXT = true
+enableGitInfo = false
+
+[permalinks]
+  posts = "/posts/:contentbasename/"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  env = "production"
+  description = "Pulling at threads, testing ideas, and making sense of the systems we live in. Writing on psychology, economics, personal development, and mental health."
+  author = "Thomas Bray"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  showtoc = true
+  tocopen = false
+  comments = false
+
+  [params.homeInfoParams]
+    Title = "Rabid Curiosity"
+    Content = "Pulling at threads, testing ideas, and making sense of the systems we live in."
+
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/dtbray"
+
+[[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+  weight = 10
+
+[[menu.main]]
+  identifier = "archives"
+  name = "Archives"
+  url = "/archives/"
+  weight = 20
+
+[[menu.main]]
+  identifier = "categories"
+  name = "Categories"
+  url = "/categories/"
+  weight = 30
+
+[[menu.main]]
+  identifier = "tags"
+  name = "Tags"
+  url = "/tags/"
+  weight = 40
+
+[[menu.main]]
+  identifier = "search"
+  name = "Search"
+  url = "/search/"
+  weight = 50

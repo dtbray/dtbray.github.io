@@ -7,7 +7,7 @@ drafting or expanding any content.
 
 ## Voice and Tone
 
-The clearest voice reference is the **About page** (`_tabs/about.md`). Read it
+The clearest voice reference is the **About page** (`content/about.md`). Read it
 before writing anything. Key characteristics:
 
 - **Analytical but personal.** Posts reason through ideas with structure, but
@@ -130,9 +130,9 @@ ones (`bash tools/stats.sh` shows the current vocabulary). Prefer specificity:
 
 ## Cross-Referencing Posts
 
-Jekyll/Chirpy supports post links via:
+Use normal Markdown links for cross-references:
 ```markdown
-[anchor text]({% post_url YYYY-MM-DD-slug %})
+[anchor text](/posts/post-slug/)
 ```
 
 Use sparingly — only when the reference adds genuine value, not just to

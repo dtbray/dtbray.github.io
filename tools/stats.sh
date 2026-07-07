@@ -8,12 +8,11 @@
 set -uo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-POSTS_DIR="$SCRIPT_DIR/../_posts"
+POSTS_DIR="$SCRIPT_DIR/../content/posts"
 
-# Collect posts (exclude .placeholder)
+# Collect posts.
 POSTS=()
 for POST in "$POSTS_DIR"/*.md; do
-  [[ "$(basename "$POST")" == ".placeholder" ]] && continue
   POSTS+=("$POST")
 done
 
@@ -65,7 +64,7 @@ echo ""
 
 echo "Posts by month:"
 for POST in "${POSTS[@]}"; do
-  basename "$POST" | grep -oE '^[0-9]{4}-[0-9]{2}'
+  front_matter "$POST" | grep "^date:" | grep -oE '[0-9]{4}-[0-9]{2}' | head -1
 done | sort | uniq -c | awk '{ printf "  %s  (%d)\n", $2, $1 }'
 echo ""
 
