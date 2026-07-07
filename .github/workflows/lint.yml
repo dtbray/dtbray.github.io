@@ -3,7 +3,7 @@ name: Lint Posts
 on:
   pull_request:
     paths:
-      - "_posts/**"
+      - "content/posts/**"
       - "tools/lint-posts.sh"
 
 jobs:

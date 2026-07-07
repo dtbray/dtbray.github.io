@@ -2,7 +2,7 @@
 
 A personal blog covering psychology, personal development, economics, and mental health. Published at [blog.thomas-bray.com](https://blog.thomas-bray.com).
 
-Built with [Jekyll](https://jekyllrb.com) and the [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) theme, hosted on GitHub Pages.
+Built with [Hugo](https://gohugo.io/) and the [PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme, hosted on GitHub Pages.
 
 ## Development
 
@@ -12,10 +12,9 @@ Quick start:
 
 ```bash
 git clone --recurse-submodules <repo-url>
-bundle install
 bash tools/run.sh
 ```
 
 ## License
 
-Content © Thomas Bray. Theme licensed under [MIT](https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE).
+Content © Thomas Bray. Theme licensed under [MIT](https://github.com/adityatelange/hugo-PaperMod/blob/master/LICENSE).

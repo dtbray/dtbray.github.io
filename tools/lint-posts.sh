@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Lint all posts in _posts/ for common front matter issues.
+# Lint all posts in content/posts/ for common front matter issues.
 # Exits 0 if no errors, 1 if any errors found.
 #
 # Usage:
@@ -9,7 +9,7 @@
 set -uo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-POSTS_DIR="$SCRIPT_DIR/../_posts"
+POSTS_DIR="$SCRIPT_DIR/../content/posts"
 
 ERRORS=0
 WARNINGS=0
@@ -37,7 +37,6 @@ has_list_items() {
 
 for POST in "$POSTS_DIR"/*.md; do
   NAME=$(basename "$POST")
-  [[ "$NAME" == ".placeholder" ]] && continue
 
   echo "$NAME"
   FM=$(front_matter "$POST")
@@ -58,13 +57,6 @@ for POST in "$POSTS_DIR"/*.md; do
       error "'$FIELD' has no items"
     fi
   done
-
-  # Filename date must match front matter date
-  FILE_DATE=$(echo "$NAME" | grep -oE '^[0-9]{4}-[0-9]{2}-[0-9]{2}' || true)
-  FM_DATE=$(echo "$FM" | grep "^date:" | grep -oE '[0-9]{4}-[0-9]{2}-[0-9]{2}' | head -1 || true)
-  if [[ -n "$FILE_DATE" && -n "$FM_DATE" && "$FILE_DATE" != "$FM_DATE" ]]; then
-    error "filename date ($FILE_DATE) != front matter date ($FM_DATE)"
-  fi
 
   # Tags should be lowercase
   _TAGFILE=$(mktemp)

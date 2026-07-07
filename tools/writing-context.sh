@@ -9,7 +9,7 @@
 set -uo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-POSTS_DIR="$SCRIPT_DIR/../_posts"
+POSTS_DIR="$SCRIPT_DIR/../content/posts"
 
 front_matter() { awk 'NR>1{ if(/^---$/) exit; print }' "$1"; }
 body()         { awk 'NR==1{ next } /^---$/{ p=1; next } p{ print }' "$1"; }
@@ -17,7 +17,6 @@ body()         { awk 'NR==1{ next } /^---$/{ p=1; next } p{ print }' "$1"; }
 # Collect posts
 POSTS=()
 for POST in "$POSTS_DIR"/*.md; do
-  [[ "$(basename "$POST")" == ".placeholder" ]] && continue
   POSTS+=("$POST")
 done
 
