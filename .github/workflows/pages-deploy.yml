@@ -9,6 +9,14 @@ on:
       - README.md
       - LICENSE
 
+  pull_request:
+    paths:
+      - ".github/workflows/pages-deploy.yml"
+      - "content/**"
+      - "hugo.toml"
+      - "static/**"
+      - "themes/**"
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -52,6 +60,7 @@ jobs:
           path: "public"
 
   deploy:
+    if: github.event_name != 'pull_request'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
